@@ -1,0 +1,10 @@
+services:
+  rabbitmq:
+    image: rabbitmq:4-management
+    container_name: rabbitmq-leilao
+    ports:
+      - "5672:5672"     # AMQP
+      - "15672:15672"   # Interface web de gerenciamento
+    environment:
+      RABBITMQ_DEFAULT_USER: leilao
+      RABBITMQ_DEFAULT_PASS: leilao123
